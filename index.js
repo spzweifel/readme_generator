@@ -3,6 +3,7 @@
 const inquirer = require('inquirer')
 // fs writes to the file system
 const fs = require ("fs")
+const genMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 // questions: "what is your project title?"
@@ -42,16 +43,24 @@ const questions = () => { //finish this function. I think it's finished now?
             type: 'input',
             name: 'instructions',
             message: 'Please, enter the test instructions.',
-        }
-    ]);
+        } // prompt for the license
+    ])
+    .then((answers) => {
+        console.log(answers)
+        const readMeString = genMarkdown(answers)  
+        writeToFile(`readMe.md`, readMeString)    
+    }) 
 }
 // TODO: Create a function to write README file
 // write out the readme file and where the user input goes, replace it with ${}. remember to enclose the entire thing in back ticks
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+ 
+}
 
 // TODO: Create a function to initialize app
 // i think here, you call the questions function that i declared up above so that when init is called, the questions are prompted to the user
-function init() {}
+// function init() {}
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
+questions()
