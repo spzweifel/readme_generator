@@ -12,7 +12,7 @@ const genMarkdown = require('./utils/generateMarkdown')
 // "how to use?"
 // "what are the contribution guidelines?"
 // "please, enter the test instructions"
-const questions = () => { //finish this function. I think it's finished now? 
+const questions = () => { //finish this function. This is finished
         return inquirer.prompt([
         {
             type: 'input',
@@ -43,7 +43,12 @@ const questions = () => { //finish this function. I think it's finished now?
             type: 'input',
             name: 'instructions',
             message: 'Please, enter the test instructions.',
-        } // prompt for the license
+        },
+        {// prompt for the license
+            type: 'input',
+            name: 'license',
+            message: 'What license are you using?'
+        } 
     ])
     .then((answers) => {
         console.log(answers)
