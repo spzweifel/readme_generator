@@ -45,9 +45,10 @@ const questions = () => { //finish this function. This is finished
             message: 'Please, enter the test instructions.',
         },
         {// prompt for the license
-            type: 'input',
+            type: 'list',
             name: 'license',
-            message: 'What license are you using?'
+            message: 'What license are you using?',
+            choices: ["mit", "apache", "gpl", "none" ]
         } 
     ])
     .then((answers) => {
@@ -59,7 +60,9 @@ const questions = () => { //finish this function. This is finished
 // TODO: Create a function to write README file
 // write out the readme file and where the user input goes, replace it with ${}. remember to enclose the entire thing in back ticks
 function writeToFile(fileName, data) {
- 
+    fs.writeFile(fileName, data, function(err){
+        console.log('your readMe has been generated')
+    })
 }
 
 // TODO: Create a function to initialize app
