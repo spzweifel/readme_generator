@@ -24,3 +24,7 @@ Type node index.js
 
 # license
   a permissive software license that places few restrictions of reuse
+
+# Screenshot
+
+![screenshot](screenshot/Readme.png)
