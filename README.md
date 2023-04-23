@@ -1,7 +1,7 @@
-# 1 ![license](https://img.shields.io/badge/license-mit-green)
+# ReadMe Generator ![license](https://img.shields.io/badge/license-mit-green)
 
 # Description 
-2
+In this project, I finished a program that generates a ReadMe file after prompting a few questions.
 
 # Table of Contents
 1. [installation](#installation)
@@ -11,16 +11,16 @@
 5. [license](#license)
 
 # Installation
-3
+It's installed through VS Code
 
 # Usage 
-4
+As questions are prompted, type in your answers and the ReadMe will be generated.
 
 # Guidelines 
-5
+To generate a ReadMe based off answers to prompted questions.
 
 # Instructions 
-6
+Type node index.js
 
 # license
   a permissive software license that places few restrictions of reuse
